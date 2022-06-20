@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Skuyter</string>
+    <string name="blogin">Login</string>
+    <string name="label2">Login Berhasil</string>
+    <string name="tnik">NIK</string>
+    <string name="tnama">Nama</string>
+    <string name="talamat">Alamat</string>
+    <string name="tnotelp">No Telepon</string>
+    <string name="tdeletedata">Delete Data</string>
+    <string name="tsimpan">Save</string>
+    <string name="tcancel">Cancel</string>
+    <string name="teditdata">Edit Data</string>
+    <string name="tcreatedata">Create Data</string>
+    <string name="tview">View</string>
+</resources>
