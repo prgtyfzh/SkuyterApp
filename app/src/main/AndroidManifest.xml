@@ -21,13 +21,15 @@
             android:exported="false" />
         <activity
             android:name=".LihatRental"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Menu"/>
         <activity
             android:name=".UpdatePenyewa"
             android:exported="false" />
         <activity
             android:name=".LihatPenyewa"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Menu"/>
         <activity
             android:name=".Menu"
             android:exported="false" />

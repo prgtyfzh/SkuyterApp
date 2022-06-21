@@ -31,7 +31,7 @@ public class LihatPenyewa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_penyewa);
 
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView1);
         btTambah = findViewById(R.id.btnAdd);
         BacaData();
         adapter = new PenyewaAdapter(penyewaArrayList);

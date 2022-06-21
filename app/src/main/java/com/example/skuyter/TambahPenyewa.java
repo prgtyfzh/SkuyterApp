@@ -50,7 +50,7 @@ public class TambahPenyewa extends AppCompatActivity {
                     qvalues.put("alamat", alamat);
                     qvalues.put("telepon", telepon);
 
-                    controller.InsertData(qvalues);
+                    controller.InsertDataPenyewa(qvalues);
                     callHome();
                 }
             }

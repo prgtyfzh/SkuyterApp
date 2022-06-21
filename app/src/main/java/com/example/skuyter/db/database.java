@@ -22,13 +22,13 @@ public class database extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists penyewa");
         db.execSQL("drop table if exists rental");
         onCreate(db);
     }
 
-    public void InsertData(HashMap<String,String> queryValues) {
+    public void InsertDataPenyewa(HashMap<String,String> queryValues) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues nilai = new ContentValues();
         nilai.put("nik", queryValues.get("nik"));
@@ -36,6 +36,12 @@ public class database extends SQLiteOpenHelper {
         nilai.put("alamat", queryValues.get("alamat"));
         nilai.put("telepon", queryValues.get("telepon"));
         db.insert("penyewa",null, nilai);
+        db.close();
+    }
+
+    public void InsertDataRental(HashMap<String , String> queryValues) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues nilai = new ContentValues();
         nilai.put("nama", queryValues.get("nama"));
         nilai.put("tanggal", queryValues.get("tanggal"));
         nilai.put("durasi", queryValues.get("durasi"));
@@ -52,6 +58,12 @@ public class database extends SQLiteOpenHelper {
         nilai.put("alamat", queryValues.get("alamat"));
         nilai.put("telepon", queryValues.get("telepon"));
         db.update("penyewa", nilai, "id_penyewa=?", new String[]{queryValues.get("id_penyewa")});
+        db.close();
+    }
+
+    public void UpdateDataRental(HashMap<String, String> queryValues) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues nilai = new ContentValues();
         nilai.put("nama", queryValues.get("nama"));
         nilai.put("tanggal", queryValues.get("tanggal"));
         nilai.put("durasi", queryValues.get("durasi"));
@@ -80,7 +92,7 @@ public class database extends SQLiteOpenHelper {
                 map.put("nik",cursor.getString(1));
                 map.put("nama", cursor.getString(2));
                 map.put("alamat", cursor.getString(3));
-                map.put("telpon",cursor.getString(4));
+                map.put("telepon",cursor.getString(4));
                 daftarpenyewa.add(map);
             } while (cursor.moveToNext());
         }

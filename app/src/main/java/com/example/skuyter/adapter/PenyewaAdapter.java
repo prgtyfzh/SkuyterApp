@@ -45,7 +45,7 @@ public class PenyewaAdapter extends RecyclerView.Adapter<PenyewaAdapter.PenyewaV
 
     @Override
     public void onBindViewHolder(PenyewaAdapter.PenyewaViewHolder holder, int position) {
-        String id_penyewa,nik, nama, alamat, telepon;
+        String id_penyewa, nik, nama, alamat, telepon;
 
         id_penyewa = listData.get(position).getId_penyewa();
         nik = listData.get(position).getNik();
@@ -76,7 +76,7 @@ public class PenyewaAdapter extends RecyclerView.Adapter<PenyewaAdapter.PenyewaV
                                 i.putExtra("nik", nik);
                                 i.putExtra("nama", nama);
                                 i.putExtra("alamat", alamat);
-                                i.putExtra("telpon", telepon);
+                                i.putExtra("telepon", telepon);
                                 control.startActivity(i);
                                 break;
                             case R.id.mnHapus:

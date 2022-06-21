@@ -64,7 +64,7 @@ public class UpdateRental extends AppCompatActivity {
                     values.put("tanggal", tanggal);
                     values.put("durasi", durasi);
                     values.put("waktu", waktu);
-                    controller.UpdateData(values);
+                    controller.UpdateDataRental(values);
                     callHome();
                 }
 

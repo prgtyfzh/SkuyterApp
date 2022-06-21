@@ -52,7 +52,7 @@ public class TambahRental extends AppCompatActivity {
                     qvalues.put("durasi", durasi);
                     qvalues.put("waktu", waktu);
 
-                    controller.InsertData(qvalues);
+                    controller.InsertDataRental(qvalues);
                     callHome();
                 }
             }
